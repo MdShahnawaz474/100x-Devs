@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function getUserData() {
+            try {
+                const response = await fetch("fakerapi.it/api/v1/persons?_locale=fr_FR");
+                const finalData = await response.json();
+                document.getElementById("userData").innerHTML = JSON.stringify(finalData, null, 2);
+            } catch (error) {
+                document.getElementById("userData").innerHTML = 'Error fetching data';
+                
+            }
+        }
+    </script>
+    <div id="userData"></div>
+    <button onclick="getUserData()">Get User Data</button>
+</body>
+</html>
+ 
