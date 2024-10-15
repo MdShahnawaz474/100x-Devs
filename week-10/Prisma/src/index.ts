@@ -5,26 +5,26 @@ const prisma = new PrismaClient();
 
 // Insert User//
 
-// async function insertUser (username:string, password:string, firstName:string, lastName:string){
-//    const res = await prisma.user.create({
-//         data:{
-//             email: username,
-//             firstName,
-//             lastName,
-//             password
-//         },
-//         select:{
-//             id:true,
-//             password:true,
-//             firstName:true
-//         },
+async function insertUser (username:string, password:string, firstName:string, lastName:string){
+   const res = await prisma.user.create({
+        data:{
+            email: username,
+            firstName,
+            lastName,
+            password
+        },
+        select:{
+            id:true,
+            password:true,
+            firstName:true
+        },
         
-//     })
-//     console.log(res);
+    })
+    console.log(res);
     
-// }
+}
 
-// insertUser("mdsdhahnawaz@gmail.com","Md", "Shahnawsaz","1234567");
+insertUser("mdsdhahnawaz@gmail.com","Md", "Shahnawsaz","1234567");
 
 // UpdateUser
 
