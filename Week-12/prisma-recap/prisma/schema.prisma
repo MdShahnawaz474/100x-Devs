@@ -16,6 +16,7 @@ model User {
   firstName   String?
   lastName    String?
   email       String @unique
+  todos       Todos[]
 
 }
 
@@ -25,4 +26,5 @@ model Todos{
   description   String
   done          Boolean @default(false)
   user_id       Int
+  user          User @relation(fields:[user_id],   references :[id])
 }
