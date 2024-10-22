@@ -10,7 +10,7 @@ export const Qoute = ()=>{
                     <div className="max-w-md mt-4 font-semibold text-xl">
                     Julies winnfield
                 </div>  
-                <div className="max-w-md  font-light text-sm text-slate-400">
+                <div className="max-w-md  font-light text-sm text-slate-500">
                     CEO| Acme corp
                 </div>
                 </div>
